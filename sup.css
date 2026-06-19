@@ -1,0 +1,45 @@
+body {
+background: black;
+color: white;
+font-family: Arial, sans-serif;
+}
+
+input[type="text"], input[type="email"], textarea {
+background: #333;
+color: white;
+border: none;
+padding: 10px;
+margin: 10px 0;
+width: 100%;
+}
+
+input:focus, textarea:focus {
+outline: none;
+border: 2px solid #555;
+}
+
+button {
+background: #555;
+color: white;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+}
+
+
+button:hover {background: #777;
+}
+
+h1 {
+color: #ff4081;
+margin-top: 50px;
+
+}
+
+a {
+color: white;
+text-decoration: none;
+}
+
+a:hover {text-decoration: underline;
+}   

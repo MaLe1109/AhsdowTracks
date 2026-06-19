@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: "Lato", sans-serif;
+ 
+}
+
+
+p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+.menu-button {
+  font-size: 30px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background: #ff4081;
+  transition: 0.3s;
+  padding-top: 50px;
+  overflow-y: auto;
+
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background: rgb(219, 150, 23);
+  transition: 0.3s;
+  padding-top: 50px;
+  overflow-y: auto;
+}
+
+.side-menu a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+
+.side-menu a:hover {
+  background: rgba(0,0,0,0.2);
+  text-decoration: underline;
+}
+.side-menu.open {
+  left: 0;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 2.5em;
+}
+
+
+img {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 100px;
+  height: auto; 
+  z-index: 1000;
+}
+

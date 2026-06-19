@@ -1,0 +1,32 @@
+body {
+      background: black;
+      color: white;
+      font-family: Arial;
+      text-align: center;
+    }
+
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 300px;
+    }
+
+    th, td {
+      border: 1px solid white;
+      padding: 10px;
+    }
+
+    th {
+      background: #222;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    h1 {
+      color: #ff4081;
+      margin-top: 50px;
+    }
