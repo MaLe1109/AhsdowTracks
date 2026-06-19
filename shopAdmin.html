@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Produkte hinzufügen</title>
+    <link rel="stylesheet" href="css/ShopAdmin.css">
+</head>
+<body>
+    <h1>Shop Produkte hinzufügen</h1>
+    <form action="add_product.php" method="post">
+        <label for="product_name">Produktname:</label><br>
+        <input type="text" id="product_name" name="product_name" required><br><br>
+
+        <label for="description">Beschreibung:</label><br>
+        <textarea id="description" name="description" required></textarea><br><br>
+
+        <label for="price">Preis:</label><br>
+        <input type="number" id="price" name="price" step="0.01" required><br><br>
+
+        <label for="image_url">Bild-URL:</label><br>
+        <input type="url" id="image_url" name="image_url"><br><br>
+
+        <button type="submit">Produkt hinzufügen</button>
+    </form>
+</body>
+</html>

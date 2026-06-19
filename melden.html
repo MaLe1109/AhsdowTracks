@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profi Melden</title>
+    <link rel="stylesheet" href="css/melden.css">
+</head>
+<body>
+    <h1>Profil melden</h1>
+    <form action="submit_report.php" method="post">
+        <label for="reportedUser">Benutzername des zu meldenden Profils:</label><br>
+        <input type="text" id="reportedUser" name="reportedUser" required><br><br>
+
+        <label for="reason">Grund für die Meldung:</label><br>
+        <textarea id="reason" name="reason" rows="4" cols="50" required></textarea><br><br>
+
+        <label class="email-label" for="email">E-Mail-Adresse (optional):</label><br>
+        <input type="email" name="email" id="email" class="email"><br><br>
+
+        <button type="submit">Melden</button>
+    </form>
+
+    <script src="js/reportuser.js"></script>
+</body>
+</html>

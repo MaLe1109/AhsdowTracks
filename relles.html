@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>ShadowTracks Release</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: rgb(219,150,23);
+    background: radial-gradient(circle at top, #111 0%, #000 70%);
+    overflow: hidden;
+}
+
+/* 🔥 animierter Glow Hintergrund */
+.background-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: rgb(219,150,23);
+    filter: blur(180px);
+    opacity: 0.15;
+    animation: move 6s infinite alternate;
+}
+
+@keyframes move {
+    from { transform: translate(-200px, -150px); }
+    to { transform: translate(200px, 150px); }
+}
+
+/* Glass Card */
+.card {
+    position: relative;
+    padding: 40px 60px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(219,150,23,0.3);
+    box-shadow: 0 0 40px rgba(219,150,23,0.2);
+    text-align: center;
+}
+
+/* Titel */
+h1 {
+    font-size: 45px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(219,150,23,0.6);
+}
+
+h2 {
+    font-size: 16px;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+/* Countdown */
+#countdown {
+    margin-top: 25px;
+    font-size: 38px;
+    font-weight: bold;
+    text-shadow: 0 0 25px rgba(219,150,23,0.8);
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+/* kleine glow dots */
+.dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgb(219,150,23);
+    border-radius: 50%;
+    animation: float 5s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); opacity: 0.2; }
+    50% { transform: translateY(-20px); opacity: 1; }
+    100% { transform: translateY(0); opacity: 0.2; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="background-glow"></div>
+
+<div class="card">
+    <h1>ShadowTracks</h1>
+    <h2>Release: 01.01.2027 – 00:00 Uhr</h2>
+
+    <div id="countdown">Lädt...</div>
+
+    <div class="footer">Aus dem Schatten in die Szene</div>
+</div>
+
+<script>
+const targetDate = new Date("2027-01-01T00:00:00").getTime();
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance <= 0) {
+        document.getElementById("countdown").innerHTML = "🔥 LIVE 🔥";
+        return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
+
+    document.getElementById("countdown").innerHTML =
+        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
+
+</body>
+</html>

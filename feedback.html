@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="css/feedback.css">
+</head>
+<body>
+    <h1>Feedback</h1>
+    <p>Wir freuen uns über Ihr Feedback! Teilen Sie uns bitte Ihre Gedanken und Anregungen mit, damit wir uns verbessern können.</p>
+    <form action="submit_feedback.php" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+        
+        <button type="submit">Senden</button>
+</body>
+</html>

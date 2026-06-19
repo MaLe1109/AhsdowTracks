@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musik Shop - Buchungen für Studios und Instrumente</title>
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+    <div class="menu-button" onclick="toggleMenu()">☰</div>
+    <div class="side-menu" id="sideMenu">
+        <span class="close" onclick="toggleMenu()">☰</span>
+        <a href="index.html">Startseite</a>
+        <a href="shop.html">Shop</a>
+        <a href="faq.html">FAQ</a>
+        <a href="impressum.html">Impressum</a>
+    </div>
+
+    <h1>Musik Shop - Buchungen</h1>
+    <p>Willkommen in unserem Musik Shop! Hier können Sie Studios und Instrumente für Ihre Musikprojekte buchen.</p>
+
+    <section id="studios">
+        <h2>Studio Buchungen</h2>
+        <div class="studio-item">
+            <h3>Aufnahmestudio A</h3>
+            <p>Beschreibung: Voll ausgestattetes Studio für professionelle Aufnahmen.</p>
+            <p>Preis: 50€ pro Stunde</p>
+            <button onclick="bookStudio('Aufnahmestudio A')">Buchen</button>
+        </div>
+        <div class="studio-item">
+            <h3>Aufnahmestudio B</h3>
+            <p>Beschreibung: Kleines Studio für Solo-Aufnahmen.</p>
+            <p>Preis: 30€ pro Stunde</p>
+            <button onclick="bookStudio('Aufnahmestudio B')">Buchen</button>
+        </div>
+    </section>
+
+    <section id="instruments">
+        <h2>Instrumenten Buchungen</h2>
+        <div class="instrument-item">
+            <h3>Gitarre</h3>
+            <p>Beschreibung: Elektrische Gitarre für Sessions.</p>
+            <p>Preis: 20€ pro Tag</p>
+            <button onclick="bookInstrument('Gitarre')">Buchen</button>
+        </div>
+        <div class="instrument-item">
+            <h3>Schlagzeug</h3>
+            <p>Beschreibung: Vollständiges Schlagzeug-Set.</p>
+            <p>Preis: 40€ pro Tag</p>
+            <button onclick="bookInstrument('Schlagzeug')">Buchen</button>
+        </div>
+    </section>
+
+    <div id="bookingForm" style="display: none;">
+        <h2>Buchung Formular</h2>
+        <form id="form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required><br>
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" required><br>
+            <label for="date">Datum:</label>
+            <input type="date" id="date" required><br>
+            <label for="time">Uhrzeit:</label>
+            <input type="time" id="time" required><br>
+            <label for="duration">Dauer (Stunden):</label>
+            <input type="number" id="duration" min="1" required><br>
+            <button type="submit">Buchen</button>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
